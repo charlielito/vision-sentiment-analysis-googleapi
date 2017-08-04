@@ -1,6 +1,6 @@
 # Sentiment Analysis with images using Google Vision Api
 
-
+Application of image recognition to find people in images and analyze their sentiments or emotions. This repo uses the Vision services of Google platform to perform that task. Given an image, it would search for faces, identify them, put a rectangle in their positions and described the emotion found. Some examples are shown below.
 
 ![alt text][s1] ![alt text][s2] ![alt text][s3] ![alt text][s4]
 
