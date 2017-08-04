@@ -48,10 +48,7 @@ python main_image.py -f imgs/people.jpg
 ```
 
 
-
-
-
-[s1]: https://github.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Happy.png "S"
-[s2]: https://github.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Surprised.png "S"
-[s3]: https://github.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Sad.png "S"
-[s4]: https://github.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Angry.png "S"
+[s1]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Happy.png "S"
+[s2]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Surprised.png "S"
+[s3]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Sad.png "S"
+[s4]: https://raw.githubusercontent.com/vision-sentiment-analysis-googleapi/master/output/output_Angry.png "S"
