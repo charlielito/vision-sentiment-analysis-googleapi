@@ -22,7 +22,7 @@ To install the python dependences just execute:
 pip install -R requirements.txt
 ```
 
-You need the ***Google Vision Api Credentials***, therefore an account and a project must be created in google cloud portal and the vision service need to be added to that project. At the end you will get a `credentials.json` file with the whole information. For more info about this step go to [Authenticating to the Cloud Vision API](https://cloud.google.com/vision/docs/auth) or follow the next instructions.
+You need the ***Google Vision Api Credentials***, therefore an account and a project must be created in google cloud portal and the vision service need to be added to that project. At the end you will get a `credentials.json` file with the whole information. For more info about this step go to [Authenticating to the Cloud Vision API](https://cloud.google.com/vision/docs/auth) and [Google Application Default Credentials](https://developers.google.com/identity/protocols/application-default-credentials) or follow the next instructions.
 
 
 ### Easy tutorial to get API Credentialss
@@ -39,7 +39,7 @@ Go to https://console.cloud.google.com/ and follow the next instructions:
  * The `Create Credentials` button will pop up a list of different types of Credentials: select `Service account  key.`
  * Create a `New service account` and fill the `Service account name` field and the `Role` field (that can be Project->Owner). Select as `Key type` JSON and finish with the button `Create`. A .json file will be instantly downloaded and saved locally. ***Put that file in the repository folder***
 
-For a visual tutorial go to `instructions` folder from this repository.
+For a visual tutorial go to the [Instructions](https://github.com/charlielito/vision-sentiment-analysis-googleapi/tree/master/instructions) folder from this repository.
 
 ## Usage
 
