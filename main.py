@@ -6,7 +6,7 @@ from google.cloud import vision
 
 #Emotions
 emo = ['Angry', 'Surprised','Sad', 'Happy']
-string = 'No sentiment'
+
 ############## Spanish version #################
 #emo = ['Bravo', 'Sorprendido','Triste', 'Feliz']
 #string = 'Sin emocion'
@@ -39,6 +39,8 @@ while cv2.getWindowProperty('Video', 0) >= 0:
         sentiment = [face1.anger.value,face1.surprise.value,face1.sorrow.value,face1.joy.value]
         for item, item2 in zip(emo, sentiment):
             print item, ": ", item2
+
+        string = 'No sentiment'
 
         if not (all( item == 'VERY_UNLIKELY' for item in sentiment) ):
             if any( item == 'VERY_LIKELY' for item in sentiment):
