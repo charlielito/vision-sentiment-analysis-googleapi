@@ -43,9 +43,9 @@ For a visual tutorial go to `instructions` folder from this repository.
 
 ## Usage
 
-Before you can call the api for visual recognition, the path to the credentials json file must be specified in the enviromental variable `GOOGLE_APPLICATION_CREDENTIALS`. Just execute for example:
+Before you can call the api for visual recognition, the path to the credentials json file must be specified in the environment variable `GOOGLE_APPLICATION_CREDENTIALS`. Just execute for example:
 ```
-export GOOGLE_APPLICATION_CREDENTIALS=NameOfCredentialsFile.json
+export GOOGLE_APPLICATION_CREDENTIALS="/path/to/keyfile.json"
 ```
 
 

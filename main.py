@@ -3,7 +3,6 @@ import numpy as np
 # Imports the Google Cloud client library
 from google.cloud import vision
 
-
 #Emotions
 emo = ['Angry', 'Surprised','Sad', 'Happy']
 
@@ -11,8 +10,13 @@ emo = ['Angry', 'Surprised','Sad', 'Happy']
 #emo = ['Bravo', 'Sorprendido','Triste', 'Feliz']
 #string = 'Sin emocion'
 
+
+from google.oauth2 import service_account
+credentials = service_account.Credentials.from_service_account_file('/home/carlosbd/FaceDetect-master/GoogleApi/vision-sentiment-analysis-googleapi/VisionApp-75f98a3bd3bd.json')
+
 # Instantiates a client
-vision_client = vision.Client()
+vision_client = vision.Client(credentials=credentials)
+
 
 # The name of the image file to annotate
 
