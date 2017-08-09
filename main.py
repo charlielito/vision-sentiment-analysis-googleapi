@@ -11,10 +11,10 @@ emo = ['Angry', 'Surprised','Sad', 'Happy']
 #string = 'Sin emocion'
 
 #from google.oauth2 import service_account
-#credentials = service_account.Credentials.from_service_account_file('VisionApp-75f98a3bd3bd.json')
+#credentials = service_account.Credentials.from_service_account_file('VisionApp-9cb3e521631b.json')
 
 # Instantiates a client
-vision_client = vision.Client(credentials=credentials)
+vision_client = vision.Client()
 
 cv2.imshow('Video', np.empty((5,5),dtype=float))
 compressRate = 1

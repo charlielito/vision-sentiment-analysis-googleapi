@@ -3,10 +3,10 @@
 Application of image recognition to find people in images and analyze their sentiments or emotions. This repo uses the Vision services of Google platform to perform that task. Given an image, it would search for faces, identify them, put a rectangle in their positions and described the emotion found. Some examples are shown below.
 
 ##### From specific images
-![alt text][s1] ![alt text][s2] ![alt text][s3] ![alt text][s4]
+![alt text][s1] ![alt text][s2] ![alt text][s3] ![alt text][s4] ![alt text][s5]
 
 ##### From Webcam Feed
-![alt text][s5] ![alt text][s6] ![alt text][s7] ![alt text][s8]
+![alt text][s6]
 
 
 ## Requirements
@@ -72,9 +72,6 @@ python main_image.py -f imgs/people.jpg
 [s2]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Surprised.jpg "S"
 [s3]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Sad.jpg "S"
 [s4]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Angry.jpg "S"
-
-
 [s5]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Happy.jpg "S"
-[s6]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Surprised.jpg "S"
-[s7]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Sad.jpg "S"
-[s8]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Angry.jpg "S"
+
+[s6]: imgs/Emotions.gif "gifsito"
