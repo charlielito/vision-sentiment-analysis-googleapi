@@ -1,11 +1,14 @@
 import cv2
 import numpy as np
 import argparse
+import io
 # Imports the Google Cloud client library
 from google.cloud import vision
 
 #Emotions
-emo = ['Angry', 'Surprised','Sad', 'Happy']
+emo = ['Angry', 'Surprised','Sad', 'Happy', "Under Exposed", "Blurred", "Headwear"]
+likelihood_name = ('UNKNOWN', 'VERY_UNLIKELY', 'UNLIKELY', 'POSSIBLE',
+                    'LIKELY', 'VERY_LIKELY')
 string = 'No sentiment'
 ############## Spanish version #################
 #emo = ['Bravo', 'Sorprendido','Triste', 'Feliz']
@@ -19,25 +22,37 @@ args = vars(ap.parse_args())
 file_name = args["file_name"]
 
 # Instantiates a client
-vision_client = vision.Client()
+vision_client = vision.ImageAnnotatorClient()
 
-image = vision_client.image(filename=file_name)
+with io.open(file_name, 'rb') as image_file:
+    content = image_file.read()
 
-faces = image.detect_faces(limit=20)
+image = vision.types.Image(content=content)
+
+response = vision_client.face_detection(image=image)
+
+faces = response.face_annotations
 print 'Number of faces: ', len(faces)
 
 img = cv2.imread(file_name)
 
-for face1 in faces:
+for face in faces:
 
-    x = face1.fd_bounds.vertices[0].x_coordinate
-    y = face1.fd_bounds.vertices[0].y_coordinate
-    x2 = face1.fd_bounds.vertices[2].x_coordinate
-    y2 = face1.fd_bounds.vertices[2].y_coordinate
+    x = face.bounding_poly.vertices[0].x
+    y = face.bounding_poly.vertices[0].y
+    x2 = face.bounding_poly.vertices[2].x
+    y2 = face.bounding_poly.vertices[2].y
 
     cv2.rectangle(img, (x, y), (x2, y2), (0, 255, 0), 2)
 
-    sentiment = [face1.anger.value,face1.surprise.value,face1.sorrow.value,face1.joy.value]
+    sentiment = [likelihood_name[face.anger_likelihood],
+                likelihood_name[face.surprise_likelihood],
+                likelihood_name[face.sorrow_likelihood],
+                likelihood_name[face.joy_likelihood],
+                likelihood_name[face.under_exposed_likelihood],
+                likelihood_name[face.blurred_likelihood],
+                likelihood_name[face.headwear_likelihood]]
+
     for item, item2 in zip(emo, sentiment):
         print item, ": ", item2
 
