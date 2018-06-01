@@ -10,7 +10,6 @@ Application of image recognition to find people in images and analyze their sent
 ![alt text][s5] ![alt text][s1] ![alt text][s2] ![alt text][s4] ![alt text][s3]
 
 
-
 ## Requirements
 * Python 2.7
 * OpenCV 3.0+ with python bindings (needed to visualize the images/video)
@@ -70,6 +69,17 @@ python main_image.py -f imgs/people.jpg
 
  ***Note:*** You have 1000 image analyses free per month plus your 300 USD from the free trial.
 
+
+### Troubleshooting
+
+If you had some problems running it with some auth library, try the following.
+
+```
+pip install --upgrade google-auth-oauthlib
+```
+
+If you had troubles installing the google cloud client with pip v10, try it with v9.
+
 [s1]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Happy.jpg "S"
 [s2]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Surprised.jpg "S"
 [s3]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_Sad.jpg "S"
@@ -77,3 +87,5 @@ python main_image.py -f imgs/people.jpg
 [s5]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/output/output_No%20sentiment.jpg "S"
 
 [s6]: https://raw.githubusercontent.com/charlielito/vision-sentiment-analysis-googleapi/master/imgs/Emotions.gif "gifsito"
+
+
